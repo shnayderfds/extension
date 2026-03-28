@@ -1,1 +1,1 @@
-it's an ai assitance extension .
+it's an ai assitance extension.it has many features
