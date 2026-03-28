@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alvelika Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="settings-container">
+    <header>
+      <img src="logo.png" alt="Alvelika" class="logo">
+      <h1>Alvelika — <span>Settings</span></h1>
+    </header>
+
+    <div class="section">
+      <label for="provider-select">AI Provider</label>
+      <select id="provider-select">
+        <option value="pollinations">Pollinations (Base URL: gen.pollinations.ai)</option>
+        <option value="cerebras">Cerebras</option>
+        <option value="openrouter">OpenRouter</option>
+        <option value="mistral">Mistral</option>
+        <option value="custom">Custom Endpoint</option>
+      </select>
+    </div>
+
+    <!-- Dynamic Section for specific provider settings -->
+    <div id="api-key-section" class="section">
+      <label for="api-key">API Key</label>
+      <input type="password" id="api-key" placeholder="Enter your API key...">
+      <p class="hint">Your key is stored locally in your browser and never shared.</p>
+    </div>
+
+    <div id="custom-endpoint-section" class="section hidden">
+      <label for="custom-url">Custom Base URL</label>
+      <input type="text" id="custom-url" placeholder="https://api.your-provider.com/v1">
+    </div>
+
+    <div id="model-section" class="section">
+      <label for="model-id">Model ID</label>
+      <input type="text" id="model-id" placeholder="e.g. gpt-4o, mixtral-8x7b, etc.">
+    </div>
+
+    <div class="section">
+      <label for="translate-lang">Translate To</label>
+      <select id="translate-lang">
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+        <option value="ar">Arabic</option>
+        <option value="zh">Chinese</option>
+        <option value="ja">Japanese</option>
+        <option value="ko">Korean</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="tr">Turkish</option>
+        <option value="it">Italian</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <p class="hint">Select text on any page to see an instant translation bubble.</p>
+    </div>
+
+    <div class="actions">
+      <button id="save-button">Save Changes</button>
+      <span id="status-message"></span>
+    </div>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>
